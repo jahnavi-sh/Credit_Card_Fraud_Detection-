@@ -1,4 +1,8 @@
-#workflow - 
+#First, we need to understand the problem statement - 
+#This project is aimed at recognizing fraudulent credit card transactions so that the customers are not charged for items that they did not purchase. 
+Here, we will try to tackle many challenges associated with building a credit card fraud detection system. 
+
+#workflow for the project - 
 #1. load credit card data 
 #2. data preprocessing 
 #3. data analysis and exploration 
