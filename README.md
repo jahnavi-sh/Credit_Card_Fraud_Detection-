@@ -3,22 +3,22 @@
 This document is written to provide aid in understanding the project.
 
 Contents of the document - 
-Understanding the problem statement 
-About the dataset
- Machine learning 
-Types of machine learning models with examples 
-Machine learning algorithm used for the model - Logistic regression 
-NumPy library 
-Pandas library 
-Scikit-learn library 
-Exploratory data analysis 
-Fixing missing values in the dataset 
-Unbalanced data 
-Undersampling 
-Train-test split 
-Model evaluation - accuracy 
+1. Understanding the problem statement 
+2.About the dataset
+3. Machine learning 
+4. Types of machine learning models with examples 
+5. Machine learning algorithm used for the model - Logistic regression 
+6. NumPy library 
+7. Pandas library 
+8. Scikit-learn library 
+9. Exploratory data analysis 
+10.Fixing missing values in the dataset 
+11.Unbalanced data 
+12.Undersampling 
+13.Train-test split 
+14.Model evaluation - accuracy 
 
-What is the problem statement for the machine learning algorithm ?
+What is the problem statement for the project?
 
 This project is aimed at recognizing fraudulent credit card transactions so that the customers are not charged for items that they did not purchase. 
 Here, we will try to tackle many challenges associated with building a credit card fraud detection system. 
@@ -29,10 +29,10 @@ Misclassified is another challenge because not every fraudulent transaction is c
 
 About the dataset - 
 The dataset consists of the following columns or features - 
-Time - time of transaction 
-Since credit card data is sensitive information. Therefore, rest of the data is encoded (V1 - V28) using principal component analysis and numerical data has been provided. 
-Amount - amount of transaction 
-Class 
+1. Time - time of transaction 
+2. Since credit card data is sensitive information. Therefore, rest of the data is encoded (V1 - V28) using principal component analysis and numerical data has been      provided. 
+3. Amount - amount of transaction 
+4. Class 
 
 We are provided with unbalanced data. There are 2,84,315 legitimate transactions and 492 fraudulent transactions. 
 
@@ -65,13 +65,13 @@ Pandas -
 Pandas is made for working with relational or labelled data both easily and intuitively. It provides various data structures and operations for manipulating numerical data and time series. 
 
 It has a lot of advantages like - 
-Fast and efficient for manipulating and analyzing data
-Data from different file objects can be loaded 
-Easy handling of missing data in data preprocessing 
-Size mutability 
-Easy dataset merging and joining 
-Flexible reshaping and pivoting of datasets 
-Gives time-series functionality 
+1. Fast and efficient for manipulating and analyzing data
+2. Data from different file objects can be loaded 
+3. Easy handling of missing data in data preprocessing 
+4. Size mutability 
+5. Easy dataset merging and joining 
+6. Flexible reshaping and pivoting of datasets 
+7. Gives time-series functionality 
 
 Pandas is built on top of NumPy library. That means that a lot of structures of NumPy are used or replicated in Pandas. The data produced by pandas are often used as input for plotting functions of Matplotlib, statistical analysis in SciPy, and machine learning algorithms in Scikit-learn. 
 
@@ -95,25 +95,25 @@ Missing values are common when working with real-world datasets. Missing data co
 In Pandas, missing values are represented by NaN. It stands for Not a Number. 
 
 Reasons for missing values - 
-Past data may be corrupted due to improper maintenance
-Observations are not recorded for certain fields due to faulty measuring equipments. There might by a failure in recording the values due to human error. 
-The user has not provided the values intentionally. 
+1. Past data may be corrupted due to improper maintenance
+2. Observations are not recorded for certain fields due to faulty measuring equipments. There might by a failure in recording the values due to human error. 
+3.  The user has not provided the values intentionally. 
 
 Why we need to handle missing values - 
-Many machine learning algorithms fail if the dataset contains missing values. 
-Missing values may result in a biased machine learning model which will lead to incorrect results if the missing values are not handled properly. 
-Missing data can lead to lack of precision. 
+1. Many machine learning algorithms fail if the dataset contains missing values. 
+2. Missing values may result in a biased machine learning model which will lead to incorrect results if the missing values are not handled properly. 
+3. Missing data can lead to lack of precision. 
 
 Types of missing data - 
 Understanding the different types of missing data will provide insights into how to approach the missing values in the dataset. 
-Missing Completely at Random (MCAR) 
+1. Missing Completely at Random (MCAR) 
 There is no relationship between the missing data and any other values observed or unobserved within the given dataset. Missing values are completely independent of other data. There is no pattern. The probability of data being missing is the same for all the observations. 
 The data may be missing due to human error, some system or equipment failure, loss of sample, or some unsatisfactory technicalities while recording the values.
 It should not be assumed as it’s a rare case. The advantage of data with such missing values is that the statistical analysis remains unbiased.   
-Missing at Random (MAR)
+2. Missing at Random (MAR)
 The reason for missing values can be explained by variables on which complete information is provided. There is relationship between the missing data and other values/data. In this case, most of the time, data is not missing for all the observations. It is missing only within sub-samples of the data and there is pattern in missing values. 
 In this, the statistical analysis might result in bias. 
-Not MIssing at Random (NMAR)
+3. Not MIssing at Random (NMAR)
 Missing values depend on unobserved data. If there is some pattern in missing data and other observed data can not explain it. If the missing data does not fall under the MCAR or MAR then it can be categorized as MNAR. 
 It can happen due to the reluctance of people in providing the required information. 
 In this case too, statistical analysis might result in bias. 
@@ -123,26 +123,26 @@ How to handle missing values -
 isnull().sum() - shows the total number of missing values in each columns 
 
 We need to analyze each column very carefully to understand the reason behind missing values. There are two ways of handling values - 
-Deleting missing values - this is a simple method. If the missing value belongs to MAR and MCAR then it can be deleted. But if the missing value belongs to MNAR then it should not be deleted. 
+1. Deleting missing values - this is a simple method. If the missing value belongs to MAR and MCAR then it can be deleted. But if the missing value belongs to MNAR then it should not be deleted. 
 The disadvantage of this method is that we might end up deleting useful data. 
 You can drop an entire column or an entire row. 
-Imputing missing values - there are various methods of imputing missing values
-Replacing with arbitrary value 
-Replacing with mean - most common method. But in case of outliers, mean will not be appropriate
-Replacing with mode - mode is most frequently occuring value. It is used in case of categorical features. 
-Replacing with median - median is middlemost value. It is better to use median in case of outliers. 
-Replacing with previous value - it is also called a forward fill. Mostly used in time series data. 
-Replacing with next value - also called backward fill. 
-Interpolation 
+2. Imputing missing values - there are various methods of imputing missing values
+3. Replacing with arbitrary value 
+4. Replacing with mean - most common method. But in case of outliers, mean will not be appropriate
+5. Replacing with mode - mode is most frequently occuring value. It is used in case of categorical features. 
+6. Replacing with median - median is middlemost value. It is better to use median in case of outliers. 
+7. Replacing with previous value - it is also called a forward fill. Mostly used in time series data. 
+8. Replacing with next value - also called backward fill. 
+9. Interpolation 
 
 value_counts() function - 
 It is used to get a series containing counts of unique values. 
 
 Parameters - 
-Normalize - If True then the object returned will contain the relative frequencies of the unique values.	
-Sort - Sort by frequencies.	
-Ascending - Sort in ascending order.
-Bins - Rather than count values, group them into half-open bins, only works with numeric data.	
+1. Normalize - If True then the object returned will contain the relative frequencies of the unique values.	
+2. Sort - Sort by frequencies.	
+3. Ascending - Sort in ascending order.
+4. Bins - Rather than count values, group them into half-open bins, only works with numeric data.	
 
 Unbalanced classes - 
 In classification cases, when the data available on one or more classes are extremely low, then it is a unbalanced class. 
@@ -152,21 +152,21 @@ We don’t get optimized results for the class which is unbalanced in real time 
 It creates a problem in making validation to test data because it is difficult to have representation across classes in case number of observations for few classes is extremely less. 
 
 Following are some of the ways of handling it - 
-Undersampling - Here, we randomly delete the class which has sufficient observations so that the comparative ration of two classes is significant in our data. This approach is simple but it can introduce a bias in the data because there is a high possibility that the data we are deleting may contain important information about the predictive class. 
-Oversampling - For the unbalanced class randomly increase the number of observations which are just copies of existing samples. This ideally gives a sufficient number of samples to work with. However, oversampling may lead to overfitting to the training data. 
-Synthetic sampling - synthetically manufacture observations of unbalanced classes which are similar to the existing using nearest neighbour classification. The problem comes when the number of observations are of extremely rare class. 
+1. Undersampling - Here, we randomly delete the class which has sufficient observations so that the comparative ration of two classes is significant in our data. This approach is simple but it can introduce a bias in the data because there is a high possibility that the data we are deleting may contain important information about the predictive class. 
+2. Oversampling - For the unbalanced class randomly increase the number of observations which are just copies of existing samples. This ideally gives a sufficient number of samples to work with. However, oversampling may lead to overfitting to the training data. 
+3. Synthetic sampling - synthetically manufacture observations of unbalanced classes which are similar to the existing using nearest neighbour classification. The problem comes when the number of observations are of extremely rare class. 
 
 Train-test split - 
 The entire dataset is split into training dataset and testing dataset. Usually, 80-20 or 70-30 split is done. The train-test split is used to prevent the model from overfitting and to estimate the performance of prediction-based algorithms. We need to split the dataset to evaluate how well our machine learning model performs. The train set is used to fit the model, and statistics of training set are known. Test set is for predictions. 
 
 This is done by using scikit-learn library and train_test_split() function. 
 Parameters - 
-*arrays: inputs such as lists, arrays, data frames, or matrices
-test_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our test size. its default value is none.
-train_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our train size. its default value is none.
-random_state: this parameter is used to control the shuffling applied to the data before applying the split. it acts as a seed.
-shuffle: This parameter is used to shuffle the data before splitting. Its default value is true.
-stratify: This parameter is used to split the data in a stratified fashion.
+1. *arrays: inputs such as lists, arrays, data frames, or matrices
+2. test_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our test size. its default value is none.
+3. train_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our train size. its default value is none.
+4. random_state: this parameter is used to control the shuffling applied to the data before applying the split. it acts as a seed.
+5. shuffle: This parameter is used to shuffle the data before splitting. Its default value is true.
+6. stratify: This parameter is used to split the data in a stratified fashion.
 
 Model evaluation - 
 
