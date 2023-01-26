@@ -41,6 +41,7 @@ We are provided with unbalanced data. There are 2,84,315 legitimate transactions
 1 - fraudulent transaction
 
 Machine learning - 
+
 Machine learning enables the processing of sonar signals and target detection. Machine Learning is a subset of Artificial Intelligence. This involves the development of computer systems that are able to learn by using algorithms and statistical measures to study data and draw results from it. Machine learning is basically an integration of computer systems, statistical mathematics and data.
 
 Machine Learning is further divided into three classes - Supervised learning, Unsupervised learning and Reinforcement Learning. 
@@ -58,11 +59,13 @@ Regression models describe the relationship between variables by fitting a line 
 Logistic regression (or sigmoid function or logit function) is a type of regression analysis and is commonly used algorithm for solving binary classification problems. It predicts a binary outcome based on a series of independent variables. The output is a predicted probability, binary value rather than numerical value. If the predicted value is a considerable negative value, it’s considered close to zero. If the predicted value if a significant positive value, it’s considered close to one. The dependent variable generally follows bernoulli distribution. Unlike linear regression model, that uses ordinary least square for parameter estimation, logistic regression uses maximum likelihood estimation, gradient descent and stochastic gradient descent. There can be infinite sets of regression coefficients. The maximum likelihood estimate is that set of regression coefficients for which the probability of getting data we have observed is maximum. To determine the values of parameters, log of likelihood function is taken, since it does not change the properties of the function. The log-likelihood is differentiated and using iterative techniques like newton method, values of parameters that maximise the log-likelihood are determined. A confusion matrix may be used to evaluate the accuracy of the logistic regression algorithm. 
 
 NumPy  
+
 It is a python library used for working with arrays. It has functions for working in the domain of linear algebra, fourier transform, and matrices. It is the fundamental package for scientific computing with python. NumPy stands for numerical python. 
 
 NumPy is preferred because it is faster than traditional python lists. It has supporting functions that make working with ndarray very easy. Arrays are frequently used where speed and resources are very important. NumPy arrays are faster because it is stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently. This is locality of reference in computer science. 
 
 Pandas - 
+
 Pandas is made for working with relational or labelled data both easily and intuitively. It provides various data structures and operations for manipulating numerical data and time series. 
 
 It has a lot of advantages like - 
@@ -93,6 +96,7 @@ Min - minimum value
 Max - maximum value
 
 Missing values - 
+
 Missing values are common when working with real-world datasets. Missing data could result from a human factor, a problem in electrical sensors, missing files, improper management or other factors. Missing values can result in loss of significant information. Missing value can bias the results of model and reduce the accuracy of the model. There are various methods of handling missing data but unfortunately they still introduce some bias such as favoring one class over the other but these methods are useful. 
 
 In Pandas, missing values are represented by NaN. It stands for Not a Number. 
@@ -139,6 +143,7 @@ You can drop an entire column or an entire row.
 9. Interpolation 
 
 value_counts() function - 
+
 It is used to get a series containing counts of unique values. 
 
 Parameters - 
@@ -151,6 +156,7 @@ Unbalanced classes -
 In classification cases, when the data available on one or more classes are extremely low, then it is a unbalanced class. 
 
 This can be a problem because - 
+
 We don’t get optimized results for the class which is unbalanced in real time as the algorithm model does not get sufficient insight at the underlying class. 
 It creates a problem in making validation to test data because it is difficult to have representation across classes in case number of observations for few classes is extremely less. 
 
