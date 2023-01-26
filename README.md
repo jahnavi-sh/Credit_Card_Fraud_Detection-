@@ -28,6 +28,7 @@ Data availability and collection are a challenge because the data is mostly priv
 Misclassified is another challenge because not every fraudulent transaction is caught and reported. 
 
 About the dataset - 
+
 The dataset consists of the following columns or features - 
 1. Time - time of transaction 
 2. Since credit card data is sensitive information. Therefore, rest of the data is encoded (V1 - V28) using principal component analysis and numerical data has been      provided. 
@@ -76,9 +77,11 @@ It has a lot of advantages like -
 Pandas is built on top of NumPy library. That means that a lot of structures of NumPy are used or replicated in Pandas. The data produced by pandas are often used as input for plotting functions of Matplotlib, statistical analysis in SciPy, and machine learning algorithms in Scikit-learn. 
 
 Scikit-Learn - 
+
 It provides efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. It has numerous machine learning, pre-processing, cross validation, and visualization algorithms. 
 
 Exploratory data analysis - 
+
 ‘describe()’ method returns description of data in DataFrame. It tells us the following information for each column - 
 Count - number of non-empty values
 Mean - the average (mean) value  
